@@ -1,0 +1,3140 @@
+          <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COSMOS - Space Dashboard</title>
+    <link rel="icon" href="./favicon.png" />
+    <script>
+      window.FontAwesomeConfig = { autoReplaceSvg: "nest" };
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- COSMOS INLINE CSS FALLBACK -->
+    <style id="cosmos-inline-fallback">
+/* COSMOS - Space Dashboard
+   Main page styles and responsive layout. */
+
+
+:root {
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --color-red-400: oklch(70.4% .191 22.216);
+  --color-yellow-400: oklch(85.2% .199 91.936);
+  --color-green-400: oklch(79.2% .209 151.711);
+  --color-green-500: oklch(72.3% .219 149.579);
+  --color-blue-400: oklch(70.7% .165 254.624);
+  --color-blue-500: oklch(62.3% .214 259.815);
+  --color-blue-600: oklch(54.6% .245 262.881);
+  --color-purple-400: oklch(71.4% .203 305.504);
+  --color-purple-500: oklch(62.7% .265 303.9);
+  --color-purple-600: oklch(55.8% .288 302.321);
+  --color-pink-400: oklch(71.8% .202 349.761);
+  --color-pink-500: oklch(65.6% .241 354.308);
+  --color-slate-300: oklch(86.9% .022 252.894);
+  --color-slate-400: oklch(70.4% .04 256.788);
+  --color-slate-500: oklch(55.4% .046 257.417);
+  --color-slate-600: oklch(44.6% .043 257.281);
+  --color-slate-700: oklch(37.2% .044 257.287);
+  --color-slate-800: oklch(27.9% .041 260.031);
+  --color-slate-900: oklch(20.8% .042 265.755);
+  --color-black: #000;
+  --color-white: #fff;
+  --color-space-dark: #0a0e27;
+  --color-space-blue: #1e3a8a;
+  --font-space: "Space Grotesk", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --spacing: .25rem;
+  --container-7xl: 80rem;
+  --text-xs: .75rem;
+  --text-xs--line-height: calc(1 / .75);
+  --text-sm: .875rem;
+  --text-sm--line-height: calc(1.25 / .875);
+  --text-base: 1rem;
+  --text-base--line-height: 1.5;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: calc(1.75 / 1.125);
+  --text-xl: 1.25rem;
+  --text-xl--line-height: calc(1.75 / 1.25);
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: calc(2 / 1.5);
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: 1.2;
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: calc(2.5 / 2.25);
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 1;
+  --text-6xl: 3.75rem;
+  --text-6xl--line-height: 1;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --leading-tight: 1.25;
+  --leading-relaxed: 1.625;
+  --radius-lg: .5rem;
+  --radius-xl: .75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --animate-pulse: pulse 2s cubic-bezier(.4, 0, .6, 1) infinite;
+  --blur-sm: 8px;
+  --blur-md: 12px;
+  --default-transition-duration: .15s;
+  --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+
+  --tw-space-y-reverse: 0;
+  --tw-space-x-reverse: 0;
+  --tw-gradient-position: to bottom;
+  --tw-gradient-from: transparent;
+  --tw-gradient-via: transparent;
+  --tw-gradient-to: transparent;
+  --tw-gradient-from-position: 0%;
+  --tw-gradient-via-position: 50%;
+  --tw-gradient-to-position: 100%;
+  --tw-ring-inset: ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+}
+
+
+  *,:after,:before,::backdrop{
+    box-sizing:border-box;
+    border:0 solid;
+    margin:0;
+    padding:0
+  }
+  ::file-selector-button{
+    box-sizing:border-box;
+    border:0 solid;
+    margin:0;
+    padding:0
+  }
+  html,:host{
+    -webkit-text-size-adjust:100%;
+    -moz-tab-size:4;
+    tab-size:4;
+    line-height:1.5;
+    font-family:var(--default-font-family,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji");
+    font-feature-settings:var(--default-font-feature-settings,normal);
+    font-variation-settings:var(--default-font-variation-settings,normal);
+    -webkit-tap-highlight-color:transparent
+  }
+  hr{
+    height:0;
+    color:inherit;
+    border-top-width:1px
+  }
+  abbr:where([title]){
+    -webkit-text-decoration:underline dotted;
+    text-decoration:underline dotted
+  }
+  h1,h2,h3,h4,h5,h6{
+    font-size:inherit;
+    font-weight:inherit
+  }
+  a{
+    color:inherit;
+    -webkit-text-decoration:inherit;
+    text-decoration:inherit
+  }
+  b,strong{
+    font-weight:bolder
+  }
+  code,kbd,samp,pre{
+    font-family:var(--default-mono-font-family,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace);
+    font-feature-settings:var(--default-mono-font-feature-settings,normal);
+    font-variation-settings:var(--default-mono-font-variation-settings,normal);
+    font-size:1em
+  }
+  small{
+    font-size:80%
+  }
+  sub,sup{
+    vertical-align:baseline;
+    font-size:75%;
+    line-height:0;
+    position:relative
+  }
+  sub{
+    bottom:-.25em
+  }
+  sup{
+    top:-.5em
+  }
+  table{
+    text-indent:0;
+    border-color:inherit;
+    border-collapse:collapse
+  }
+  :-moz-focusring{
+    outline:auto
+  }
+  progress{
+    vertical-align:baseline
+  }
+  summary{
+    display:list-item
+  }
+  ol,ul,menu{
+    list-style:none
+  }
+  img,svg,video,canvas,audio,iframe,embed,object{
+    vertical-align:middle;
+    display:block
+  }
+  img,video{
+    max-width:100%;
+    height:auto
+  }
+  button,input,select,optgroup,textarea{
+    font:inherit;
+    font-feature-settings:inherit;
+    font-variation-settings:inherit;
+    letter-spacing:inherit;
+    color:inherit;
+    opacity:1;
+    background-color:#0000;
+    border-radius:0
+  }
+  ::file-selector-button{
+    font:inherit;
+    font-feature-settings:inherit;
+    font-variation-settings:inherit;
+    letter-spacing:inherit;
+    color:inherit;
+    opacity:1;
+    background-color:#0000;
+    border-radius:0
+  }
+  :where(select:is([multiple],[size])) optgroup{
+    font-weight:bolder
+  }
+  :where(select:is([multiple],[size])) optgroup option{
+    padding-inline-start:20px
+  }
+  ::file-selector-button{
+    margin-inline-end:4px
+  }
+  ::placeholder{
+    opacity:1
+  }
+  @supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){
+    ::placeholder{
+      color:currentColor
+    }
+    @supports (color:color-mix(in lab,red,red)){
+      ::placeholder{
+        color:color-mix(in oklab,currentcolor 50%,transparent)
+      }
+    }
+  }
+  textarea{
+    resize:vertical
+  }
+  ::-webkit-search-decoration{
+    -webkit-appearance:none
+  }
+  ::-webkit-date-and-time-value{
+    min-height:1lh;
+    text-align:inherit
+  }
+  ::-webkit-datetime-edit{
+    display:inline-flex
+  }
+  ::-webkit-datetime-edit-fields-wrapper{
+    padding:0
+  }
+  ::-webkit-datetime-edit{
+    padding-block:0
+  }
+  ::-webkit-datetime-edit-year-field{
+    padding-block:0
+  }
+  ::-webkit-datetime-edit-month-field{
+    padding-block:0
+  }
+  ::-webkit-datetime-edit-day-field{
+    padding-block:0
+  }
+  ::-webkit-datetime-edit-hour-field{
+    padding-block:0
+  }
+  ::-webkit-datetime-edit-minute-field{
+    padding-block:0
+  }
+  ::-webkit-datetime-edit-second-field{
+    padding-block:0
+  }
+  ::-webkit-datetime-edit-millisecond-field{
+    padding-block:0
+  }
+  ::-webkit-datetime-edit-meridiem-field{
+    padding-block:0
+  }
+  ::-webkit-calendar-picker-indicator{
+    line-height:1
+  }
+  :-moz-ui-invalid{
+    box-shadow:none
+  }
+  button,input:where([type=button],[type=reset],[type=submit]){
+    -webkit-appearance:button;
+    -moz-appearance:button;
+    appearance:button
+  }
+  ::file-selector-button{
+    -webkit-appearance:button;
+    -moz-appearance:button;
+    appearance:button
+  }
+  ::-webkit-inner-spin-button{
+    height:auto
+  }
+  ::-webkit-outer-spin-button{
+    height:auto
+  }
+  [hidden]:where(:not([hidden=until-found])){
+    display:none!important
+  }
+}
+
+
+  .absolute{
+    position:absolute
+  }
+  .fixed{
+    position:fixed
+  }
+  .relative{
+    position:relative
+  }
+  .sticky{
+    position:sticky
+  }
+  .inset-0{
+    inset:calc(var(--spacing)*0)
+  }
+  .top-0{
+    top:calc(var(--spacing)*0)
+  }
+  .top-3{
+    top:calc(var(--spacing)*3)
+  }
+  .right-0{
+    right:calc(var(--spacing)*0)
+  }
+  .right-3{
+    right:calc(var(--spacing)*3)
+  }
+  .right-6{
+    right:calc(var(--spacing)*6)
+  }
+  .bottom-6{
+    bottom:calc(var(--spacing)*6)
+  }
+  .left-0{
+    left:calc(var(--spacing)*0)
+  }
+  .left-6{
+    left:calc(var(--spacing)*6)
+  }
+  .z-10{
+    z-index:10
+  }
+  .z-40{
+    z-index:40
+  }
+  .col-span-full{
+    grid-column:1/-1
+  }
+  .container{
+    width:100%
+  }
+  @media(min-width:40rem){
+    .container{
+      max-width:40rem
+    }
+  }
+  @media(min-width:48rem){
+    .container{
+      max-width:48rem
+    }
+  }
+  @media(min-width:64rem){
+    .container{
+      max-width:64rem
+    }
+  }
+  @media(min-width:80rem){
+    .container{
+      max-width:80rem
+    }
+  }
+  @media(min-width:96rem){
+    .container{
+      max-width:96rem
+    }
+  }
+  .mx-auto{
+    margin-inline:auto
+  }
+  .mt-0\.5{
+    margin-top:calc(var(--spacing)*.5)
+  }
+  .mt-1{
+    margin-top:calc(var(--spacing)*1)
+  }
+  .mt-2{
+    margin-top:calc(var(--spacing)*2)
+  }
+  .mt-4{
+    margin-top:calc(var(--spacing)*4)
+  }
+  .mt-\[90px\]{
+    margin-top:90px
+  }
+  .mr-1{
+    margin-right:calc(var(--spacing)*1)
+  }
+  .mr-2{
+    margin-right:calc(var(--spacing)*2)
+  }
+  .mb-1{
+    margin-bottom:calc(var(--spacing)*1)
+  }
+  .mb-2{
+    margin-bottom:calc(var(--spacing)*2)
+  }
+  .mb-3{
+    margin-bottom:calc(var(--spacing)*3)
+  }
+  .mb-4{
+    margin-bottom:calc(var(--spacing)*4)
+  }
+  .mb-6{
+    margin-bottom:calc(var(--spacing)*6)
+  }
+  .mb-8{
+    margin-bottom:calc(var(--spacing)*8)
+  }
+  .ml-0{
+    margin-left:calc(var(--spacing)*0)
+  }
+  .line-clamp-1{
+    -webkit-line-clamp:1;
+    -webkit-box-orient:vertical;
+    display:-webkit-box;
+    overflow:hidden
+  }
+  .line-clamp-2{
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    display:-webkit-box;
+    overflow:hidden
+  }
+  .block{
+    display:block
+  }
+  .flex{
+    display:flex
+  }
+  .grid{
+    display:grid
+  }
+  .hidden{
+    display:none
+  }
+  .inline-flex{
+    display:inline-flex
+  }
+  .table{
+    display:table
+  }
+  .h-2{
+    height:calc(var(--spacing)*2)
+  }
+  .h-4{
+    height:calc(var(--spacing)*4)
+  }
+  .h-6{
+    height:calc(var(--spacing)*6)
+  }
+  .h-8{
+    height:calc(var(--spacing)*8)
+  }
+  .h-10{
+    height:calc(var(--spacing)*10)
+  }
+  .h-20{
+    height:calc(var(--spacing)*20)
+  }
+  .h-24{
+    height:calc(var(--spacing)*24)
+  }
+  .h-48{
+    height:calc(var(--spacing)*48)
+  }
+  .h-\[300px\]{
+    height:300px
+  }
+  .h-full{
+    height:100%
+  }
+  .min-h-\[400px\]{
+    min-height:400px
+  }
+  .w-2{
+    width:calc(var(--spacing)*2)
+  }
+  .w-4{
+    width:calc(var(--spacing)*4)
+  }
+  .w-5{
+    width:calc(var(--spacing)*5)
+  }
+  .w-6{
+    width:calc(var(--spacing)*6)
+  }
+  .w-8{
+    width:calc(var(--spacing)*8)
+  }
+  .w-10{
+    width:calc(var(--spacing)*10)
+  }
+  .w-20{
+    width:calc(var(--spacing)*20)
+  }
+  .w-48{
+    width:calc(var(--spacing)*48)
+  }
+  .w-64{
+    width:calc(var(--spacing)*64)
+  }
+  .w-full{
+    width:100%
+  }
+  .w-px{
+    width:1px
+  }
+  .max-w-7xl{
+    max-width:var(--container-7xl)
+  }
+  .min-w-\[800px\]{
+    min-width:800px
+  }
+  .flex-1{
+    flex:1
+  }
+  .flex-shrink-0,.shrink-0{
+    flex-shrink:0
+  }
+  .animate-pulse{
+    animation:var(--animate-pulse)
+  }
+  .cursor-pointer{
+    cursor:pointer
+  }
+  .grid-cols-1{
+    grid-template-columns:repeat(1,minmax(0,1fr))
+  }
+  .grid-cols-2{
+    grid-template-columns:repeat(2,minmax(0,1fr))
+  }
+  .flex-col{
+    flex-direction:column
+  }
+  .items-center{
+    align-items:center
+  }
+  .items-start{
+    align-items:flex-start
+  }
+  .justify-between{
+    justify-content:space-between
+  }
+  .justify-center{
+    justify-content:center
+  }
+  .gap-1{
+    gap:calc(var(--spacing)*1)
+  }
+  .gap-2{
+    gap:calc(var(--spacing)*2)
+  }
+  .gap-3{
+    gap:calc(var(--spacing)*3)
+  }
+  .gap-4{
+    gap:calc(var(--spacing)*4)
+  }
+  .gap-6{
+    gap:calc(var(--spacing)*6)
+  }
+  :where(.space-y-1>:not(:last-child)){
+    --tw-space-y-reverse:0;
+    margin-block-start:calc(calc(var(--spacing)*1)*var(--tw-space-y-reverse));
+    margin-block-end:calc(calc(var(--spacing)*1)*calc(1 - var(--tw-space-y-reverse)))
+  }
+  :where(.space-y-2>:not(:last-child)){
+    --tw-space-y-reverse:0;
+    margin-block-start:calc(calc(var(--spacing)*2)*var(--tw-space-y-reverse));
+    margin-block-end:calc(calc(var(--spacing)*2)*calc(1 - var(--tw-space-y-reverse)))
+  }
+  :where(.space-y-3>:not(:last-child)){
+    --tw-space-y-reverse:0;
+    margin-block-start:calc(calc(var(--spacing)*3)*var(--tw-space-y-reverse));
+    margin-block-end:calc(calc(var(--spacing)*3)*calc(1 - var(--tw-space-y-reverse)))
+  }
+  :where(.space-y-4>:not(:last-child)){
+    --tw-space-y-reverse:0;
+    margin-block-start:calc(calc(var(--spacing)*4)*var(--tw-space-y-reverse));
+    margin-block-end:calc(calc(var(--spacing)*4)*calc(1 - var(--tw-space-y-reverse)))
+  }
+  :where(.space-y-6>:not(:last-child)){
+    --tw-space-y-reverse:0;
+    margin-block-start:calc(calc(var(--spacing)*6)*var(--tw-space-y-reverse));
+    margin-block-end:calc(calc(var(--spacing)*6)*calc(1 - var(--tw-space-y-reverse)))
+  }
+  :where(.space-x-1>:not(:last-child)){
+    --tw-space-x-reverse:0;
+    margin-inline-start:calc(calc(var(--spacing)*1)*var(--tw-space-x-reverse));
+    margin-inline-end:calc(calc(var(--spacing)*1)*calc(1 - var(--tw-space-x-reverse)))
+  }
+  :where(.space-x-2>:not(:last-child)){
+    --tw-space-x-reverse:0;
+    margin-inline-start:calc(calc(var(--spacing)*2)*var(--tw-space-x-reverse));
+    margin-inline-end:calc(calc(var(--spacing)*2)*calc(1 - var(--tw-space-x-reverse)))
+  }
+  :where(.space-x-3>:not(:last-child)){
+    --tw-space-x-reverse:0;
+    margin-inline-start:calc(calc(var(--spacing)*3)*var(--tw-space-x-reverse));
+    margin-inline-end:calc(calc(var(--spacing)*3)*calc(1 - var(--tw-space-x-reverse)))
+  }
+  :where(.space-x-4>:not(:last-child)){
+    --tw-space-x-reverse:0;
+    margin-inline-start:calc(calc(var(--spacing)*4)*var(--tw-space-x-reverse));
+    margin-inline-end:calc(calc(var(--spacing)*4)*calc(1 - var(--tw-space-x-reverse)))
+  }
+  :where(.divide-y>:not(:last-child)){
+    --tw-divide-y-reverse:0;
+    border-bottom-style:var(--tw-border-style);
+    border-top-style:var(--tw-border-style);
+    border-top-width:calc(1px*var(--tw-divide-y-reverse));
+    border-bottom-width:calc(1px*calc(1 - var(--tw-divide-y-reverse)))
+  }
+  :where(.divide-slate-700>:not(:last-child)){
+    border-color:var(--color-slate-700)
+  }
+  .self-end{
+    align-self:flex-end
+  }
+  .self-start{
+    align-self:flex-start
+  }
+  .overflow-hidden{
+    overflow:hidden
+  }
+  .overflow-x-auto{
+    overflow-x:auto
+  }
+  .overflow-y-auto{
+    overflow-y:auto
+  }
+  .rounded{
+    border-radius:.25rem
+  }
+  .rounded-2xl{
+    border-radius:var(--radius-2xl)
+  }
+  .rounded-3xl{
+    border-radius:var(--radius-3xl)
+  }
+  .rounded-full{
+    border-radius:3.40282e38px
+  }
+  .rounded-lg{
+    border-radius:var(--radius-lg)
+  }
+  .rounded-xl{
+    border-radius:var(--radius-xl)
+  }
+  .border{
+    border-style:var(--tw-border-style);
+    border-width:1px
+  }
+  .border-t{
+    border-top-style:var(--tw-border-style);
+    border-top-width:1px
+  }
+  .border-r{
+    border-right-style:var(--tw-border-style);
+    border-right-width:1px
+  }
+  .border-b{
+    border-bottom-style:var(--tw-border-style);
+    border-bottom-width:1px
+  }
+  .border-slate-700{
+    border-color:var(--color-slate-700)
+  }
+  .border-slate-800{
+    border-color:var(--color-slate-800)
+  }
+  .bg-blue-500{
+    background-color:var(--color-blue-500)
+  }
+  .bg-blue-500\/5{
+    background-color:#3080ff0d
+  }
+  @supports (color:color-mix(in lab,red,red)){
+    .bg-blue-500\/5{
+      background-color:color-mix(in oklab,var(--color-blue-500)5%,transparent)
+    }
+  }
+  .bg-blue-500\/10{
+    background-color:#3080ff1a
+  }
+  @supports (color:color-mix(in lab,red,red)){
+    .bg-blue-500\/10{
+      background-color:color-mix(in oklab,var(--color-blue-500)10%,transparent)
+    }
+  }
+  .bg-blue-500\/20{
+    background-color:#3080ff33
+  }
+  @supports (color:color-mix(in lab,red,red)){
+    .bg-blue-500\/20{
+      background-color:color-mix(in oklab,var(--color-blue-500)20%,transparent)
+    }
+  }
+  .bg-green-500{
+    background-color:var(--color-green-500)
+  }
+  .bg-slate-700{
+    background-color:var(--color-slate-700)
+  }
+  .bg-slate-800{
+    background-color:var(--color-slate-800)
+  }
+  .bg-slate-800\/30{
+    background-color:#1d293d4d
+  }
+  @supports (color:color-mix(in lab,red,red)){
+    .bg-slate-800\/30{
+      background-color:color-mix(in oklab,var(--color-slate-800)30%,transparent)
+    }
+  }
+  .bg-slate-800\/50{
+    background-color:#1d293d80
+  }
+  @supports (color:color-mix(in lab,red,red)){
+    .bg-slate-800\/50{
+      background-color:color-mix(in oklab,var(--color-slate-800)50%,transparent)
+    }
+  }
+  .bg-slate-900{
+    background-color:var(--color-slate-900)
+  }
+  .bg-slate-900\/50{
+    background-color:#0f172b80
+  }
+  @supports (color:color-mix(in lab,red,red)){
+    .bg-slate-900\/50{
+      background-color:color-mix(in oklab,var(--color-slate-900)50%,transparent)
+    }
+  }
+  .bg-slate-900\/95{
+    background-color:#0f172bf2
+  }
+  @supports (color:color-mix(in lab,red,red)){
+    .bg-slate-900\/95{
+      background-color:color-mix(in oklab,var(--color-slate-900)95%,transparent)
+    }
+  }
+  .bg-white\/10{
+    background-color:#ffffff1a
+  }
+  @supports (color:color-mix(in lab,red,red)){
+    .bg-white\/10{
+      background-color:color-mix(in oklab,var(--color-white)10%,transparent)
+    }
+  }
+  .bg-linear-to-br{
+    --tw-gradient-position:to bottom right
+  }
+  @supports (background-image:linear-gradient(in lab,red,red)){
+    .bg-linear-to-br{
+      --tw-gradient-position:to bottom right in oklab
+    }
+  }
+  .bg-linear-to-br{
+    background-image:linear-gradient(var(--tw-gradient-stops))
+  }
+  .bg-linear-to-r{
+    --tw-gradient-position:to right
+  }
+  @supports (background-image:linear-gradient(in lab,red,red)){
+    .bg-linear-to-r{
+      --tw-gradient-position:to right in oklab
+    }
+  }
+  .bg-linear-to-r{
+    background-image:linear-gradient(var(--tw-gradient-stops))
+  }
+  .bg-linear-to-t{
+    --tw-gradient-position:to top
+  }
+  @supports (background-image:linear-gradient(in lab,red,red)){
+    .bg-linear-to-t{
+      --tw-gradient-position:to top in oklab
+    }
+  }
+  .bg-linear-to-t{
+    background-image:linear-gradient(var(--tw-gradient-stops))
+  }
+  .from-black\/80{
+    --tw-gradient-from:#000c
+  }
+  @supports (color:color-mix(in lab,red,red)){
+    .from-black\/80{
+      --tw-gradient-from:color-mix(in oklab,var(--color-black)80%,transparent)
+    }
+  }
+  .from-black\/80{
+    --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))
+  }
+  .from-blue-400{
+    --tw-gradient-from:var(--color-blue-400);
+    --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))
+  }
+  .from-blue-500{
+    --tw-gradient-from:var(--color-blue-500);
+    --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))
+  }
+  .from-blue-500\/10{
+    --tw-gradient-from:#3080ff1a
+  }
+  @supports (color:color-mix(in lab,red,red)){
+    .from-blue-500\/10{
+      --tw-gradient-from:color-mix(in oklab,var(--color-blue-500)10%,transparent)
+    }
+  }
+  .from-blue-500\/10{
+    --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))
+  }
+  .from-blue-500\/20{
+    --tw-gradient-from:#3080ff33
+  }
+  @supports (color:color-mix(in lab,red,red)){
+    .from-blue-500\/20{
+      --tw-gradient-from:color-mix(in oklab,var(--color-blue-500)20%,transparent)
+    }
+  }
+  .from-blue-500\/20{
+    --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))
+  }
+  .from-slate-900{
+    --tw-gradient-from:var(--color-slate-900);
+    --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))
+  }
+  .from-space-dark{
+    --tw-gradient-from:var(--color-space-dark);
+    --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))
+  }
+  .via-purple-400{
+    --tw-gradient-via:var(--color-purple-400);
+    --tw-gradient-via-stops:var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-via)var(--tw-gradient-via-position),var(--tw-gradient-to)var(--tw-gradient-to-position);
+    --tw-gradient-stops:var(--tw-gradient-via-stops)
+  }
+  .via-purple-500\/10{
+    --tw-gradient-via:#ac4bff1a
+  }
+  @supports (color:color-mix(in lab,red,red)){
+    .via-purple-500\/10{
+      --tw-gradient-via:color-mix(in oklab,var(--color-purple-500)10%,transparent)
+    }
+  }
+  .via-purple-500\/10{
+    --tw-gradient-via-stops:var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-via)var(--tw-gradient-via-position),var(--tw-gradient-to)var(--tw-gradient-to-position);
+    --tw-gradient-stops:var(--tw-gradient-via-stops)
+  }
+  .via-slate-900{
+    --tw-gradient-via:var(--color-slate-900);
+    --tw-gradient-via-stops:var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-via)var(--tw-gradient-via-position),var(--tw-gradient-to)var(--tw-gradient-to-position);
+    --tw-gradient-stops:var(--tw-gradient-via-stops)
+  }
+  .via-transparent{
+    --tw-gradient-via:transparent;
+    --tw-gradient-via-stops:var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-via)var(--tw-gradient-via-position),var(--tw-gradient-to)var(--tw-gradient-to-position);
+    --tw-gradient-stops:var(--tw-gradient-via-stops)
+  }
+  .to-pink-400{
+    --tw-gradient-to:var(--color-pink-400);
+    --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))
+  }
+  .to-pink-500\/10{
+    --tw-gradient-to:#f6339a1a
+  }
+  @supports (color:color-mix(in lab,red,red)){
+    .to-pink-500\/10{
+      --tw-gradient-to:color-mix(in oklab,var(--color-pink-500)10%,transparent)
+    }
+  }
+  .to-pink-500\/10{
+    --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))
+  }
+  .to-purple-500{
+    --tw-gradient-to:var(--color-purple-500);
+    --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))
+  }
+  .to-purple-500\/20{
+    --tw-gradient-to:#ac4bff33
+  }
+  @supports (color:color-mix(in lab,red,red)){
+    .to-purple-500\/20{
+      --tw-gradient-to:color-mix(in oklab,var(--color-purple-500)20%,transparent)
+    }
+  }
+  .to-purple-500\/20{
+    --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))
+  }
+  .to-purple-600{
+    --tw-gradient-to:var(--color-purple-600);
+    --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))
+  }
+  .to-space-blue{
+    --tw-gradient-to:var(--color-space-blue);
+    --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))
+  }
+  .to-transparent{
+    --tw-gradient-to:transparent;
+    --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))
+  }
+  .bg-clip-text{
+    -webkit-background-clip:text;
+    background-clip:text
+  }
+  .object-contain{
+    object-fit:contain
+  }
+  .object-cover{
+    object-fit:cover
+  }
+  .p-3{
+    padding:calc(var(--spacing)*3)
+  }
+  .p-4{
+    padding:calc(var(--spacing)*4)
+  }
+  .p-5{
+    padding:calc(var(--spacing)*5)
+  }
+  .p-6{
+    padding:calc(var(--spacing)*6)
+  }
+  .p-8{
+    padding:calc(var(--spacing)*8)
+  }
+  .px-2{
+    padding-inline:calc(var(--spacing)*2)
+  }
+  .px-3{
+    padding-inline:calc(var(--spacing)*3)
+  }
+  .px-4{
+    padding-inline:calc(var(--spacing)*4)
+  }
+  .px-6{
+    padding-inline:calc(var(--spacing)*6)
+  }
+  .py-1{
+    padding-block:calc(var(--spacing)*1)
+  }
+  .py-1\.5{
+    padding-block:calc(var(--spacing)*1.5)
+  }
+  .py-2{
+    padding-block:calc(var(--spacing)*2)
+  }
+  .py-2\.5{
+    padding-block:calc(var(--spacing)*2.5)
+  }
+  .py-3{
+    padding-block:calc(var(--spacing)*3)
+  }
+  .py-4{
+    padding-block:calc(var(--spacing)*4)
+  }
+  .py-8{
+    padding-block:calc(var(--spacing)*8)
+  }
+  .py-12{
+    padding-block:calc(var(--spacing)*12)
+  }
+  .pt-4{
+    padding-top:calc(var(--spacing)*4)
+  }
+  .text-center{
+    text-align:center
+  }
+  .text-left{
+    text-align:left
+  }
+  .text-right{
+    text-align:right
+  }
+  .font-inter{
+    font-family:var(--font-inter)
+  }
+  .font-space{
+    font-family:var(--font-space)
+  }
+  .text-2xl{
+    font-size:var(--text-2xl);
+    line-height:var(--tw-leading,var(--text-2xl--line-height))
+  }
+  .text-3xl{
+    font-size:var(--text-3xl);
+    line-height:var(--tw-leading,var(--text-3xl--line-height))
+  }
+  .text-4xl{
+    font-size:var(--text-4xl);
+    line-height:var(--tw-leading,var(--text-4xl--line-height))
+  }
+  .text-5xl{
+    font-size:var(--text-5xl);
+    line-height:var(--tw-leading,var(--text-5xl--line-height))
+  }
+  .text-6xl{
+    font-size:var(--text-6xl);
+    line-height:var(--tw-leading,var(--text-6xl--line-height))
+  }
+  .text-lg{
+    font-size:var(--text-lg);
+    line-height:var(--tw-leading,var(--text-lg--line-height))
+  }
+  .text-sm{
+    font-size:var(--text-sm);
+    line-height:var(--tw-leading,var(--text-sm--line-height))
+  }
+  .text-xl{
+    font-size:var(--text-xl);
+    line-height:var(--tw-leading,var(--text-xl--line-height))
+  }
+  .text-xs{
+    font-size:var(--text-xs);
+    line-height:var(--tw-leading,var(--text-xs--line-height))
+  }
+  .leading-relaxed{
+    --tw-leading:var(--leading-relaxed);
+    line-height:var(--leading-relaxed)
+  }
+  .leading-tight{
+    --tw-leading:var(--leading-tight);
+    line-height:var(--leading-tight)
+  }
+  .font-bold{
+    --tw-font-weight:var(--font-weight-bold);
+    font-weight:var(--font-weight-bold)
+  }
+  .font-medium{
+    --tw-font-weight:var(--font-weight-medium);
+    font-weight:var(--font-weight-medium)
+  }
+  .font-semibold{
+    --tw-font-weight:var(--font-weight-semibold);
+    font-weight:var(--font-weight-semibold)
+  }
+  .whitespace-nowrap{
+    white-space:nowrap
+  }
+  .text-blue-400{
+    color:var(--color-blue-400)
+  }
+  .text-green-400{
+    color:var(--color-green-400)
+  }
+  .text-purple-400{
+    color:var(--color-purple-400)
+  }
+  .text-red-400{
+    color:var(--color-red-400)
+  }
+  .text-slate-300{
+    color:var(--color-slate-300)
+  }
+  .text-slate-400{
+    color:var(--color-slate-400)
+  }
+  .text-slate-500{
+    color:var(--color-slate-500)
+  }
+  .text-slate-700{
+    color:var(--color-slate-700)
+  }
+  .text-transparent{
+    color:#0000
+  }
+  .text-white{
+    color:var(--color-white)
+  }
+  .text-yellow-400{
+    color:var(--color-yellow-400)
+  }
+  .italic{
+    font-style:italic
+  }
+  .opacity-0{
+    opacity:0
+  }
+  .ring{
+    --tw-ring-shadow:var(--tw-ring-inset,)0 0 0 calc(1px + var(--tw-ring-offset-width))var(--tw-ring-color,currentcolor);
+    box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)
+  }
+  .backdrop-blur-md{
+    --tw-backdrop-blur:blur(var(--blur-md));
+    -webkit-backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,);
+    backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,)
+  }
+  .backdrop-blur-sm{
+    --tw-backdrop-blur:blur(var(--blur-sm));
+    -webkit-backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,);
+    backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,)
+  }
+  .transition-all{
+    transition-property:all;
+    transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));
+    transition-duration:var(--tw-duration,var(--default-transition-duration))
+  }
+  .transition-colors{
+    transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;
+    transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));
+    transition-duration:var(--tw-duration,var(--default-transition-duration))
+  }
+  .transition-opacity{
+    transition-property:opacity;
+    transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));
+    transition-duration:var(--tw-duration,var(--default-transition-duration))
+  }
+  .transition-transform{
+    transition-property:transform,translate,scale,rotate;
+    transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));
+    transition-duration:var(--tw-duration,var(--default-transition-duration))
+  }
+  .duration-300{
+    --tw-duration:.3s;
+    transition-duration:.3s
+  }
+  .duration-500{
+    --tw-duration:.5s;
+    transition-duration:.5s
+  }
+  @media(hover:hover){
+    .group-hover\:scale-110:is(:where(.group):hover *){
+      --tw-scale-x:110%;
+      --tw-scale-y:110%;
+      --tw-scale-z:110%;
+      scale:var(--tw-scale-x)var(--tw-scale-y)
+    }
+    .group-hover\:text-blue-400:is(:where(.group):hover *){
+      color:var(--color-blue-400)
+    }
+    .group-hover\:opacity-100:is(:where(.group):hover *){
+      opacity:1
+    }
+    .hover\:border-blue-500\/30:hover{
+      border-color:#3080ff4d
+    }
+    @supports (color:color-mix(in lab,red,red)){
+      .hover\:border-blue-500\/30:hover{
+        border-color:color-mix(in oklab,var(--color-blue-500)30%,transparent)
+      }
+    }
+    .hover\:border-blue-500\/50:hover{
+      border-color:#3080ff80
+    }
+    @supports (color:color-mix(in lab,red,red)){
+      .hover\:border-blue-500\/50:hover{
+        border-color:color-mix(in oklab,var(--color-blue-500)50%,transparent)
+      }
+    }
+    .hover\:bg-blue-600:hover{
+      background-color:var(--color-blue-600)
+    }
+    .hover\:bg-slate-600:hover{
+      background-color:var(--color-slate-600)
+    }
+    .hover\:bg-slate-700:hover{
+      background-color:var(--color-slate-700)
+    }
+    .hover\:bg-slate-800:hover{
+      background-color:var(--color-slate-800)
+    }
+    .hover\:bg-slate-800\/30:hover{
+      background-color:#1d293d4d
+    }
+    @supports (color:color-mix(in lab,red,red)){
+      .hover\:bg-slate-800\/30:hover{
+        background-color:color-mix(in oklab,var(--color-slate-800)30%,transparent)
+      }
+    }
+    .hover\:bg-white\/20:hover{
+      background-color:#fff3
+    }
+    @supports (color:color-mix(in lab,red,red)){
+      .hover\:bg-white\/20:hover{
+        background-color:color-mix(in oklab,var(--color-white)20%,transparent)
+      }
+    }
+  }
+  @media(min-width:40rem){
+    .sm\:block{
+      display:block
+    }
+    .sm\:hidden{
+      display:none
+    }
+    .sm\:inline{
+      display:inline
+    }
+    .sm\:grid-cols-4{
+      grid-template-columns:repeat(4,minmax(0,1fr))
+    }
+    .sm\:flex-row{
+      flex-direction:row
+    }
+    .sm\:items-center{
+      align-items:center
+    }
+    .sm\:justify-between{
+      justify-content:space-between
+    }
+  }
+  @media(min-width:48rem){
+    .md\:mb-4{
+      margin-bottom:calc(var(--spacing)*4)
+    }
+    .md\:mb-6{
+      margin-bottom:calc(var(--spacing)*6)
+    }
+    .md\:mb-8{
+      margin-bottom:calc(var(--spacing)*8)
+    }
+    .md\:mb-12{
+      margin-bottom:calc(var(--spacing)*12)
+    }
+    .md\:h-8{
+      height:calc(var(--spacing)*8)
+    }
+    .md\:h-64{
+      height:calc(var(--spacing)*64)
+    }
+    .md\:h-\[400px\]{
+      height:400px
+    }
+    .md\:w-8{
+      width:calc(var(--spacing)*8)
+    }
+    .md\:w-64{
+      width:calc(var(--spacing)*64)
+    }
+    .md\:grid-cols-2{
+      grid-template-columns:repeat(2,minmax(0,1fr))
+    }
+    .md\:grid-cols-4{
+      grid-template-columns:repeat(4,minmax(0,1fr))
+    }
+    .md\:flex-row{
+      flex-direction:row
+    }
+    .md\:gap-4{
+      gap:calc(var(--spacing)*4)
+    }
+    .md\:gap-6{
+      gap:calc(var(--spacing)*6)
+    }
+    :where(.md\:space-y-6>:not(:last-child)){
+      --tw-space-y-reverse:0;
+      margin-block-start:calc(calc(var(--spacing)*6)*var(--tw-space-y-reverse));
+      margin-block-end:calc(calc(var(--spacing)*6)*calc(1 - var(--tw-space-y-reverse)))
+    }
+    :where(.md\:space-x-2>:not(:last-child)){
+      --tw-space-x-reverse:0;
+      margin-inline-start:calc(calc(var(--spacing)*2)*var(--tw-space-x-reverse));
+      margin-inline-end:calc(calc(var(--spacing)*2)*calc(1 - var(--tw-space-x-reverse)))
+    }
+    :where(.md\:space-x-3>:not(:last-child)){
+      --tw-space-x-reverse:0;
+      margin-inline-start:calc(calc(var(--spacing)*3)*var(--tw-space-x-reverse));
+      margin-inline-end:calc(calc(var(--spacing)*3)*calc(1 - var(--tw-space-x-reverse)))
+    }
+    :where(.md\:space-x-4>:not(:last-child)){
+      --tw-space-x-reverse:0;
+      margin-inline-start:calc(calc(var(--spacing)*4)*var(--tw-space-x-reverse));
+      margin-inline-end:calc(calc(var(--spacing)*4)*calc(1 - var(--tw-space-x-reverse)))
+    }
+    .md\:self-center{
+      align-self:center
+    }
+    .md\:rounded-2xl{
+      border-radius:var(--radius-2xl)
+    }
+    .md\:p-4{
+      padding:calc(var(--spacing)*4)
+    }
+    .md\:p-6{
+      padding:calc(var(--spacing)*6)
+    }
+    .md\:px-4{
+      padding-inline:calc(var(--spacing)*4)
+    }
+    .md\:px-6{
+      padding-inline:calc(var(--spacing)*6)
+    }
+    .md\:py-4{
+      padding-block:calc(var(--spacing)*4)
+    }
+    .md\:text-2xl{
+      font-size:var(--text-2xl);
+      line-height:var(--tw-leading,var(--text-2xl--line-height))
+    }
+    .md\:text-3xl{
+      font-size:var(--text-3xl);
+      line-height:var(--tw-leading,var(--text-3xl--line-height))
+    }
+    .md\:text-base{
+      font-size:var(--text-base);
+      line-height:var(--tw-leading,var(--text-base--line-height))
+    }
+    .md\:text-lg{
+      font-size:var(--text-lg);
+      line-height:var(--tw-leading,var(--text-lg--line-height))
+    }
+    .md\:text-sm{
+      font-size:var(--text-sm);
+      line-height:var(--tw-leading,var(--text-sm--line-height))
+    }
+  }
+  @media(min-width:64rem){
+    .lg\:left-64{
+      left:calc(var(--spacing)*64)
+    }
+    .lg\:ml-64{
+      margin-left:calc(var(--spacing)*64)
+    }
+    .lg\:hidden{
+      display:none
+    }
+    .lg\:h-\[600px\]{
+      height:600px
+    }
+    .lg\:grid-cols-2{
+      grid-template-columns:repeat(2,minmax(0,1fr))
+    }
+    .lg\:grid-cols-3{
+      grid-template-columns:repeat(3,minmax(0,1fr))
+    }
+    .lg\:gap-8{
+      gap:calc(var(--spacing)*8)
+    }
+    :where(.lg\:space-x-6>:not(:last-child)){
+      --tw-space-x-reverse:0;
+      margin-inline-start:calc(calc(var(--spacing)*6)*var(--tw-space-x-reverse));
+      margin-inline-end:calc(calc(var(--spacing)*6)*calc(1 - var(--tw-space-x-reverse)))
+    }
+    .lg\:p-8{
+      padding:calc(var(--spacing)*8)
+    }
+    .lg\:px-6{
+      padding-inline:calc(var(--spacing)*6)
+    }
+    .lg\:px-8{
+      padding-inline:calc(var(--spacing)*8)
+    }
+    .lg\:py-8{
+      padding-block:calc(var(--spacing)*8)
+    }
+    .lg\:text-xl{
+      font-size:var(--text-xl);
+      line-height:var(--tw-leading,var(--text-xl--line-height))
+    }
+  }
+  @media(min-width:80rem){
+    .xl\:col-span-2{
+      grid-column:span 2/span 2
+    }
+    .xl\:mr-6{
+      margin-right:calc(var(--spacing)*6)
+    }
+    .xl\:grid-cols-2{
+      grid-template-columns:repeat(2,minmax(0,1fr))
+    }
+    .xl\:grid-cols-3{
+      grid-template-columns:repeat(3,minmax(0,1fr))
+    }
+    .xl\:grid-cols-8{
+      grid-template-columns:repeat(8,minmax(0,1fr))
+    }
+    .xl\:flex-row{
+      flex-direction:row
+    }
+    .xl\:items-center{
+      align-items:center
+    }
+    .xl\:items-start{
+      align-items:flex-start
+    }
+    :where(.xl\:space-y-0>:not(:last-child)){
+      --tw-space-y-reverse:0;
+      margin-block-start:calc(calc(var(--spacing)*0)*var(--tw-space-y-reverse));
+      margin-block-end:calc(calc(var(--spacing)*0)*calc(1 - var(--tw-space-y-reverse)))
+    }
+  }
+
+::-webkit-scrollbar{
+  display:none
+}
+a,button,.nav-link{
+  cursor:pointer
+}
+.sidebar-mobile{
+  z-index:50;
+  transform:translate(-100%)
+}
+@media(min-width:1024px){
+  .sidebar-mobile{
+    transform:translate(0)
+  }
+}
+.sidebar-mobile.sidebar-open{
+  transform:translate(0)!important
+}
+.sidebar-overlay{
+  z-index:45;
+  background-color:#00000080;
+  transition:opacity .3s;
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0
+}
+.custom-scrollbar{
+  scrollbar-width:thin;
+  scrollbar-color:#475569 #1e293b
+}
+.custom-scrollbar::-webkit-scrollbar{
+  height:8px;
+  display:block
+}
+.custom-scrollbar::-webkit-scrollbar-track{
+  background:#1e293b;
+  border-radius:4px
+}
+.custom-scrollbar::-webkit-scrollbar-thumb{
+  background:#475569;
+  border-radius:4px
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover{
+  background:#64748b
+}
+.date-input-wrapper{
+  cursor:pointer;
+  background-color:#1e293b80;
+  border:1px solid #334155;
+  border-radius:12px;
+  min-width:150px;
+  padding:8px 12px 8px 36px;
+  transition:all .2s;
+  display:inline-block;
+  position:relative
+}
+@media(min-width:768px){
+  .date-input-wrapper{
+    min-width:180px;
+    padding:8px 16px 8px 44px
+  }
+}
+.date-input-wrapper:hover{
+  background-color:#1e293bb3;
+  border-color:#475569
+}
+.date-input-wrapper:has(.custom-date-input:focus){
+  border-color:#3b82f6;
+  box-shadow:0 0 0 3px #3b82f61a
+}
+.date-input-wrapper:before{
+  content:"";
+  color:#94a3b8;
+  pointer-events:none;
+  z-index:1;
+  font-family:"Font Awesome 6 Free";
+  font-size:12px;
+  font-weight:400;
+  position:absolute;
+  top:50%;
+  left:12px;
+  transform:translateY(-50%)
+}
+@media(min-width:768px){
+  .date-input-wrapper:before{
+    font-size:14px;
+    left:16px
+  }
+}
+.custom-date-input{
+  opacity:0;
+  cursor:pointer;
+  background:0 0;
+  border:none;
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0
+}
+.date-input-wrapper:after{
+  content:attr(data-date);
+  color:#fff;
+  white-space:nowrap;
+  font-family:Inter,sans-serif;
+  font-size:12px
+}
+@media(min-width:768px){
+  .date-input-wrapper:after{
+    font-size:14px
+  }
+}
+.custom-date-input::-webkit-calendar-picker-indicator{
+  cursor:pointer;
+  opacity:0;
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0
+}
+
+@keyframes pulse{
+  50%{
+    opacity:.5
+  }
+}
+
+:root {
+  color-scheme: dark;
+  --cosmos-ink: #0b1020;
+  --cosmos-line: rgba(148, 163, 184, 0.16);
+  --cosmos-accent: #8ab4f8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 78% 0%, rgba(37, 99, 235, 0.09), transparent 34rem),
+    var(--cosmos-ink);
+}
+
+#sidebar {
+  background-color: #0c1222;
+  border-color: var(--cosmos-line);
+}
+
+#header {
+  border-color: var(--cosmos-line);
+  box-shadow: 0 5px 18px rgba(2, 6, 23, 0.14);
+}
+
+#sidebar .nav-link {
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+#sidebar .nav-link.text-blue-400 {
+  box-shadow: inset 2px 0 var(--cosmos-accent);
+  background-color: rgba(59, 130, 246, 0.09);
+}
+
+.app-section {
+  background-color: rgba(8, 13, 27, 0.28);
+}
+
+#apod-image-container,
+#featured-launch > div,
+#launches-grid > div,
+#planets-grid .planet-card,
+#planets .xl\:col-span-2,
+#planets .space-y-6 > div {
+  border-color: var(--cosmos-line);
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.12);
+}
+
+#apod-image-container {
+  background-image: linear-gradient(145deg, rgba(30, 58, 138, 0.1), transparent 58%);
+}
+
+#header h2,
+.app-section h2,
+.app-section h3 {
+  letter-spacing: -0.025em;
+}
+
+#planets-grid .planet-card,
+#launches-grid > div {
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--cosmos-accent);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) {
+  #sidebar .nav-link:hover {
+    background-color: rgba(148, 163, 184, 0.08);
+  }
+
+  #planets-grid .planet-card:hover,
+  #launches-grid > div:hover {
+    border-color: rgba(138, 180, 248, 0.4);
+    background-color: rgba(30, 41, 59, 0.72);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+    </style>
+  </head>
+  <body
+    class="bg-linear-to-br from-space-dark via-slate-900 to-space-blue font-inter text-white"
+  >
+    <aside
+      id="sidebar"
+      class="fixed top-0 left-0 h-full w-64 bg-slate-900 border-r border-slate-800 flex flex-col transition-transform duration-300 sidebar-mobile"
+    >
+      <div class="p-4 border-b border-slate-800">
+        <div class="flex items-center space-x-3">
+          <div
+            class="w-10 h-10 bg-linear-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"
+          >
+            <i class="fas fa-rocket text-white text-lg"></i>
+          </div>
+          <div>
+            <h1
+              class="text-lg font-space font-bold bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+            >
+              COSMOS
+            </h1>
+            <p class="text-xs text-slate-400">Space Dashboard</p>
+          </div>
+        </div>
+      </div>
+      <nav class="flex-1 p-4 space-y-1 overflow-y-auto">
+        <a
+          href="#"
+          data-section="today-in-space"
+          class="nav-link flex items-center space-x-3 px-3 py-2.5 bg-blue-500/10 text-blue-400 rounded-lg font-medium transition-colors"
+        >
+          <i class="fas fa-image w-5"></i>
+          <span>Today in Space</span>
+        </a>
+        <a
+          href="#"
+          data-section="launches"
+          class="nav-link flex items-center space-x-3 px-3 py-2.5 text-slate-300 hover:bg-slate-800 rounded-lg font-medium transition-colors"
+        >
+          <i class="fas fa-rocket w-5"></i>
+          <span>Launches</span>
+        </a>
+        <a
+          href="#"
+          data-section="planets"
+          class="nav-link flex items-center space-x-3 px-3 py-2.5 text-slate-300 hover:bg-slate-800 rounded-lg font-medium transition-colors"
+        >
+          <i class="fas fa-globe w-5"></i>
+          <span>Planets</span>
+        </a>
+      </nav>
+      <div class="p-4 border-t border-slate-800">
+        <div
+          class="flex items-center space-x-3 px-3 py-2 bg-slate-800 rounded-lg cursor-pointer hover:bg-slate-700 transition-colors"
+        >
+          <div
+            class="w-8 h-8 bg-linear-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center"
+          >
+            <i class="fas fa-user text-white text-sm"></i>
+          </div>
+          <div class="flex-1">
+            <p class="text-sm font-semibold">Space Explorer</p>
+            <p class="text-xs text-slate-400">explorer@cosmos.space</p>
+          </div>
+          <i class="fas fa-ellipsis-v text-slate-400"></i>
+        </div>
+      </div>
+    </aside>
+    <header
+      id="header"
+      class="fixed top-0 left-0 lg:left-64 right-0 z-40 bg-slate-900/95 backdrop-blur-md border-b border-slate-800"
+    >
+      <div class="px-4 lg:px-8 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-3 lg:space-x-6">
+            <button
+              id="sidebar-toggle"
+              class="lg:hidden w-10 h-10 flex items-center justify-center bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"
+            >
+              <i class="fas fa-bars text-white"></i>
+            </button>
+            <div>
+              <h2
+                class="text-lg lg:text-xl font-space font-bold bg-linear-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+              >
+                Space Explorer Dashboard
+              </h2>
+              <p class="text-xs text-slate-400 mt-0.5 hidden sm:block">
+                Real-time space data from NASA & SpaceDevs
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-2 md:space-x-4">
+            <div
+              class="flex items-center space-x-2 md:space-x-3 px-2 md:px-4 py-2 bg-slate-800/50 border border-slate-700 rounded-xl"
+            >
+              <div class="flex items-center space-x-1 md:space-x-2">
+                <div
+                  class="w-2 h-2 bg-green-500 rounded-full animate-pulse"
+                ></div>
+                <span class="text-xs text-slate-400 hidden sm:inline"
+                  >Live Data</span
+                >
+              </div>
+              <div class="w-px h-4 bg-slate-700 hidden sm:block"></div>
+              <div class="flex items-center space-x-1 md:space-x-2">
+                <i class="fas fa-globe text-blue-400 text-sm"></i>
+                <span
+                  class="text-xs text-slate-300 font-semibold hidden sm:inline"
+                  >8 Planets</span
+                >
+                <span class="text-xs text-slate-300 font-semibold sm:hidden"
+                  >8</span
+                >
+              </div>
+              <div class="w-px h-4 bg-slate-700 hidden sm:block"></div>
+              <div class="flex items-center space-x-1 md:space-x-2">
+                <i class="fas fa-rocket text-purple-400 text-sm"></i>
+                <span
+                  class="text-xs text-slate-300 font-semibold hidden sm:inline"
+                  id="launches-count"
+                  >10 Launches</span
+                >
+                <span
+                  class="text-xs text-slate-300 font-semibold sm:hidden"
+                  id="launches-count-mobile"
+                  >10</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="ml-0 lg:ml-64 mt-[90px]">
+      <section
+        id="today-in-space"
+        data-section="today-in-space"
+        class="app-section min-h-screen py-4 lg:py-8 px-4 lg:px-6 bg-slate-900/50"
+      >
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6"
+          >
+            <div>
+              <h2 class="text-xl md:text-2xl font-space font-bold mb-1">
+                Today in Space
+              </h2>
+              <p id="apod-date" class="text-slate-400 text-xs md:text-sm">
+                Astronomy Picture of the Day
+              </p>
+            </div>
+            <div class="flex items-center space-x-2 md:space-x-3">
+              <label for="apod-date-input" class="date-input-wrapper">
+                <input
+                  type="date"
+                  id="apod-date-input"
+                  class="custom-date-input"
+                  aria-label="Choose a NASA Astronomy Picture of the Day date"
+                  value=""
+                  max=""
+                  min="1995-06-16"
+                />
+              </label>
+              <button
+                id="load-date-btn"
+                class="px-3 md:px-4 py-2 bg-blue-500 rounded-xl hover:bg-blue-600 transition-colors font-semibold text-sm flex items-center space-x-1 md:space-x-2"
+              >
+                <i class="fas fa-search"></i>
+                <span class="hidden sm:inline">Load</span>
+              </button>
+              <button
+                id="today-apod-btn"
+                class="px-3 md:px-4 py-2 bg-slate-800 border border-slate-700 rounded-xl hover:bg-slate-700 transition-colors font-semibold text-sm"
+              >
+                Today
+              </button>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 xl:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+            <div class="xl:col-span-2">
+              <div
+                id="apod-image-container"
+                class="relative rounded-2xl overflow-hidden group h-[300px] md:h-[400px] lg:h-[600px] bg-slate-800/50 flex items-center justify-center"
+              >
+                <div id="apod-loading" class="apod-state text-center" role="status" aria-live="polite">
+                  <i
+                    class="fas fa-spinner fa-spin text-4xl text-blue-400 mb-4"
+                  ></i>
+                  <p class="text-slate-400">Loading today's image...</p>
+                </div>
+                <img
+                  id="apod-image"
+                  class="w-full h-full object-cover hidden"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="space-y-4 md:space-y-6">
+              <div
+                class="bg-slate-800/50 border border-slate-700 rounded-xl md:rounded-2xl p-4 md:p-6"
+              >
+                <h3
+                  id="apod-title"
+                  class="text-lg md:text-2xl font-semibold mb-3 md:mb-4"
+                >
+                  Loading today's discovery...
+                </h3>
+                <div
+                  class="flex items-center space-x-4 mb-4 text-sm text-slate-400"
+                >
+                  <span id="apod-date-detail">Loading date...</span>
+                </div>
+                <p
+                  id="apod-explanation"
+                  class="text-slate-300 leading-relaxed mb-4"
+                >
+                  NASA's Astronomy Picture of the Day pairs a daily image with
+                  the story behind it.
+                </p>
+                <div
+                  id="apod-copyright"
+                  class="text-xs text-slate-400 italic mb-4 hidden"
+                ></div>
+              </div>
+              <div
+                class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6"
+              >
+                <h4 class="font-semibold mb-3 flex items-center">
+                  <i class="fas fa-info-circle text-blue-400 mr-2"></i>
+                  Image Details
+                </h4>
+                <div class="space-y-3 text-sm">
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Date</span>
+                    <span id="apod-date-info" class="font-medium">Loading...</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Media Type</span>
+                    <span id="apod-media-type" class="font-medium">Image</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Source</span>
+                    <span class="font-medium">NASA APOD</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="launches"
+        data-section="launches"
+        class="app-section hidden py-4 lg:py-8 px-4 lg:px-6 bg-slate-900/50"
+      >
+        <div class="max-w-7xl mx-auto">
+          <div class="mb-6 md:mb-8">
+            <h2 class="text-2xl md:text-3xl font-space font-bold mb-2">
+              Upcoming Launches
+            </h2>
+            <p class="text-slate-400 text-sm md:text-base">
+              Real-time tracking of the next missions to space
+            </p>
+          </div>
+          <div id="featured-launch" class="mb-8">
+            <!-- STATIC FEATURED LAUNCH -->
+            <div
+              class="relative bg-slate-800/30 border border-slate-700 rounded-3xl overflow-hidden group hover:border-blue-500/50 transition-all"
+            >
+              <div
+                class="absolute inset-0 bg-linear-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+              <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-6 p-8">
+                <div class="flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center gap-3 mb-4">
+                      <span
+                        class="px-4 py-1.5 bg-blue-500/20 text-blue-400 rounded-full text-sm font-semibold flex items-center gap-2"
+                      >
+                        <i class="fas fa-star"></i>
+                        Featured Launch
+                      </span>
+                      <span
+                        class="px-4 py-1.5 bg-green-500/20 text-green-400 rounded-full text-sm font-semibold"
+                      >
+                        Go
+                      </span>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-3 leading-tight">
+                      Starship Flight 3
+                    </h3>
+                    <div
+                      class="flex flex-col xl:flex-row xl:items-center gap-4 mb-6 text-slate-400"
+                    >
+                      <div class="flex items-center gap-2">
+                        <i class="fas fa-building"></i>
+                        <span>SpaceX</span>
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <i class="fas fa-rocket"></i>
+                        <span>Starship</span>
+                      </div>
+                    </div>
+                    <div
+                      class="inline-flex items-center gap-3 px-6 py-3 bg-linear-to-r from-blue-500/20 to-purple-500/20 rounded-xl mb-6"
+                    >
+                      <i class="fas fa-clock text-2xl text-blue-400"></i>
+                      <div>
+                        <p class="text-2xl font-bold text-blue-400">2</p>
+                        <p class="text-xs text-slate-400">Days Until Launch</p>
+                      </div>
+                    </div>
+                    <div class="grid xl:grid-cols-2 gap-4 mb-6">
+                      <div class="bg-slate-900/50 rounded-xl p-4">
+                        <p
+                          class="text-xs text-slate-400 mb-1 flex items-center gap-2"
+                        >
+                          <i class="fas fa-calendar"></i>
+                          Launch Date
+                        </p>
+                        <p class="font-semibold">March 14, 2024</p>
+                      </div>
+                      <div class="bg-slate-900/50 rounded-xl p-4">
+                        <p
+                          class="text-xs text-slate-400 mb-1 flex items-center gap-2"
+                        >
+                          <i class="fas fa-clock"></i>
+                          Launch Time
+                        </p>
+                        <p class="font-semibold">12:00 PM UTC</p>
+                      </div>
+                      <div class="bg-slate-900/50 rounded-xl p-4">
+                        <p
+                          class="text-xs text-slate-400 mb-1 flex items-center gap-2"
+                        >
+                          <i class="fas fa-map-marker-alt"></i>
+                          Location
+                        </p>
+                        <p class="font-semibold text-sm">Starbase, Texas</p>
+                      </div>
+                      <div class="bg-slate-900/50 rounded-xl p-4">
+                        <p
+                          class="text-xs text-slate-400 mb-1 flex items-center gap-2"
+                        >
+                          <i class="fas fa-globe"></i>
+                          Country
+                        </p>
+                        <p class="font-semibold">USA</p>
+                      </div>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed mb-6">
+                      The third integrated flight test of Starship. The
+                      prototype for the heavy-lift launch vehicle is currently
+                      being built by SpaceX.
+                    </p>
+                  </div>
+                  <div class="flex flex-col md:flex-row gap-3">
+                    <button
+                      class="flex-1 self-start md:self-center px-6 py-3 bg-blue-500 rounded-xl hover:bg-blue-600 transition-colors font-semibold flex items-center justify-center gap-2"
+                    >
+                      <i class="fas fa-info-circle"></i>
+                      View Full Details
+                    </button>
+                    <div class="icons self-end md:self-center">
+                      <button
+                        class="px-4 py-3 bg-slate-700 rounded-xl hover:bg-slate-600 transition-colors"
+                      >
+                        <i class="far fa-heart"></i>
+                      </button>
+                      <button
+                        class="px-4 py-3 bg-slate-700 rounded-xl hover:bg-slate-600 transition-colors"
+                      >
+                        <i class="fas fa-bell"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="relative">
+                  <div
+                    class="relative h-full min-h-[400px] rounded-2xl overflow-hidden bg-slate-900/50"
+                  >
+                    <!-- Placeholder image/icon since we can't load external images reliably without correct URLs -->
+                    <div
+                      class="flex items-center justify-center h-full min-h-[400px] bg-slate-800"
+                    >
+                      <i class="fas fa-rocket text-9xl text-slate-700/50"></i>
+                    </div>
+                    <div
+                      class="absolute inset-0 bg-linear-to-t from-slate-900 via-transparent to-transparent"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-6">
+            <h3 class="text-xl font-semibold mb-4">All Upcoming Launches</h3>
+          </div>
+          <div
+            id="launches-grid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            <!-- STATIC LAUNCH CARD 1 -->
+            <div
+              class="bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all group cursor-pointer"
+            >
+              <div
+                class="relative h-48 bg-slate-900/50 flex items-center justify-center"
+              >
+                <i class="fas fa-space-shuttle text-5xl text-slate-700"></i>
+                <div class="absolute top-3 right-3">
+                  <span
+                    class="px-3 py-1 bg-green-500/90 text-white backdrop-blur-sm rounded-full text-xs font-semibold"
+                  >
+                    Go
+                  </span>
+                </div>
+              </div>
+              <div class="p-5">
+                <div class="mb-3">
+                  <h4
+                    class="font-bold text-lg mb-2 line-clamp-2 group-hover:text-blue-400 transition-colors"
+                  >
+                    Falcon 9 Block 5 | Starlink Group 6-44
+                  </h4>
+                  <p class="text-sm text-slate-400 flex items-center gap-2">
+                    <i class="fas fa-building text-xs"></i>
+                    SpaceX
+                  </p>
+                </div>
+                <div class="space-y-2 mb-4">
+                  <div class="flex items-center gap-2 text-sm">
+                    <i class="fas fa-calendar text-slate-500 w-4"></i>
+                    <span class="text-slate-300">Mar 15, 2024</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm">
+                    <i class="fas fa-clock text-slate-500 w-4"></i>
+                    <span class="text-slate-300">23:00 UTC</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm">
+                    <i class="fas fa-rocket text-slate-500 w-4"></i>
+                    <span class="text-slate-300">Falcon 9</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm">
+                    <i class="fas fa-map-marker-alt text-slate-500 w-4"></i>
+                    <span class="text-slate-300 line-clamp-1">KSC, LC-39A</span>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-2 pt-4 border-t border-slate-700"
+                >
+                  <button
+                    class="flex-1 px-4 py-2 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors text-sm font-semibold"
+                  >
+                    Details
+                  </button>
+                  <button
+                    class="px-3 py-2 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors"
+                  >
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- STATIC LAUNCH CARD 2 -->
+            <div
+              class="bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all group cursor-pointer"
+            >
+              <div
+                class="relative h-48 bg-slate-900/50 flex items-center justify-center"
+              >
+                <i class="fas fa-rocket text-5xl text-slate-700"></i>
+                <div class="absolute top-3 right-3">
+                  <span
+                    class="px-3 py-1 bg-yellow-500/90 text-white backdrop-blur-sm rounded-full text-xs font-semibold"
+                  >
+                    TBC
+                  </span>
+                </div>
+              </div>
+              <div class="p-5">
+                <div class="mb-3">
+                  <h4
+                    class="font-bold text-lg mb-2 line-clamp-2 group-hover:text-blue-400 transition-colors"
+                  >
+                    Electron | "Owl Night Long"
+                  </h4>
+                  <p class="text-sm text-slate-400 flex items-center gap-2">
+                    <i class="fas fa-building text-xs"></i>
+                    Rocket Lab
+                  </p>
+                </div>
+                <div class="space-y-2 mb-4">
+                  <div class="flex items-center gap-2 text-sm">
+                    <i class="fas fa-calendar text-slate-500 w-4"></i>
+                    <span class="text-slate-300">Mar 16, 2024</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm">
+                    <i class="fas fa-clock text-slate-500 w-4"></i>
+                    <span class="text-slate-300">09:15 UTC</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm">
+                    <i class="fas fa-rocket text-slate-500 w-4"></i>
+                    <span class="text-slate-300">Electron</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm">
+                    <i class="fas fa-map-marker-alt text-slate-500 w-4"></i>
+                    <span class="text-slate-300 line-clamp-1"
+                      >Mahia Peninsula, NZ</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-2 pt-4 border-t border-slate-700"
+                >
+                  <button
+                    class="flex-1 px-4 py-2 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors text-sm font-semibold"
+                  >
+                    Details
+                  </button>
+                  <button
+                    class="px-3 py-2 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors"
+                  >
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- STATIC LAUNCH CARD 3 -->
+            <div
+              class="bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all group cursor-pointer"
+            >
+              <div
+                class="relative h-48 bg-slate-900/50 flex items-center justify-center"
+              >
+                <i class="fas fa-satellite-dish text-5xl text-slate-700"></i>
+                <div class="absolute top-3 right-3">
+                  <span
+                    class="px-3 py-1 bg-blue-500/90 text-white backdrop-blur-sm rounded-full text-xs font-semibold"
+                  >
+                    TBD
+                  </span>
+                </div>
+              </div>
+              <div class="p-5">
+                <div class="mb-3">
+                  <h4
+                    class="font-bold text-lg mb-2 line-clamp-2 group-hover:text-blue-400 transition-colors"
+                  >
+                    Ariane 6 | Maiden Flight
+                  </h4>
+                  <p class="text-sm text-slate-400 flex items-center gap-2">
+                    <i class="fas fa-building text-xs"></i>
+                    Arianespace
+                  </p>
+                </div>
+                <div class="space-y-2 mb-4">
+                  <div class="flex items-center gap-2 text-sm">
+                    <i class="fas fa-calendar text-slate-500 w-4"></i>
+                    <span class="text-slate-300">June 2024</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm">
+                    <i class="fas fa-clock text-slate-500 w-4"></i>
+                    <span class="text-slate-300">TBD</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm">
+                    <i class="fas fa-rocket text-slate-500 w-4"></i>
+                    <span class="text-slate-300">Ariane 62</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm">
+                    <i class="fas fa-map-marker-alt text-slate-500 w-4"></i>
+                    <span class="text-slate-300 line-clamp-1"
+                      >Guiana Space Centre</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-2 pt-4 border-t border-slate-700"
+                >
+                  <button
+                    class="flex-1 px-4 py-2 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors text-sm font-semibold"
+                  >
+                    Details
+                  </button>
+                  <button
+                    class="px-3 py-2 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors"
+                  >
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="planets"
+        data-section="planets"
+        class="app-section hidden py-4 lg:py-8 px-4 lg:px-6 bg-slate-900/50"
+      >
+        <div class="max-w-7xl mx-auto">
+          <div class="mb-4 md:mb-6">
+            <h2 class="text-xl md:text-2xl font-space font-bold mb-1">
+              Explore Our Solar System
+            </h2>
+            <p class="text-slate-400 text-xs md:text-sm">
+              Discover the planets, moons, and celestial bodies in our cosmic
+              neighborhood
+            </p>
+          </div>
+          <div
+            id="planets-grid"
+            class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 xl:grid-cols-8 gap-3 md:gap-4 mb-8 md:mb-12"
+          >
+            <!-- Mercury -->
+            <div
+              class="planet-card bg-slate-800/50 border border-slate-700 rounded-2xl p-4 transition-all cursor-pointer group"
+              data-planet-id="mercury"
+              style="--planet-color: #eab308"
+              onmouseover="this.style.borderColor='#eab30880'"
+              onmouseout="this.style.borderColor='#334155'"
+            >
+              <div class="relative mb-3 h-24 flex items-center justify-center">
+                <img
+                  class="w-20 h-20 object-contain group-hover:scale-110 transition-transform"
+                  src="./images/mercury.png"
+                  alt="Mercury"
+                />
+              </div>
+              <h4 class="font-semibold text-center text-sm">Mercury</h4>
+              <p class="text-xs text-slate-400 text-center">0.39 AU</p>
+            </div>
+            <!-- Venus -->
+            <div
+              class="planet-card bg-slate-800/50 border border-slate-700 rounded-2xl p-4 transition-all cursor-pointer group"
+              data-planet-id="venus"
+              style="--planet-color: #f97316"
+              onmouseover="this.style.borderColor='#f9731680'"
+              onmouseout="this.style.borderColor='#334155'"
+            >
+              <div class="relative mb-3 h-24 flex items-center justify-center">
+                <img
+                  class="w-20 h-20 object-contain group-hover:scale-110 transition-transform"
+                  src="./images/venus.png"
+                  alt="Venus"
+                />
+              </div>
+              <h4 class="font-semibold text-center text-sm">Venus</h4>
+              <p class="text-xs text-slate-400 text-center">0.72 AU</p>
+            </div>
+            <!-- Earth -->
+            <div
+              class="planet-card bg-slate-800/50 border border-slate-700 rounded-2xl p-4 transition-all cursor-pointer group"
+              data-planet-id="earth"
+              style="--planet-color: #3b82f6"
+              onmouseover="this.style.borderColor='#3b82f680'"
+              onmouseout="this.style.borderColor='#334155'"
+            >
+              <div class="relative mb-3 h-24 flex items-center justify-center">
+                <img
+                  class="w-20 h-20 object-contain group-hover:scale-110 transition-transform"
+                  src="./images/earth.png"
+                  alt="Earth"
+                />
+              </div>
+              <h4 class="font-semibold text-center text-sm">Earth</h4>
+              <p class="text-xs text-slate-400 text-center">1.00 AU</p>
+            </div>
+            <!-- Mars -->
+            <div
+              class="planet-card bg-slate-800/50 border border-slate-700 rounded-2xl p-4 transition-all cursor-pointer group"
+              data-planet-id="mars"
+              style="--planet-color: #ef4444"
+              onmouseover="this.style.borderColor='#ef444480'"
+              onmouseout="this.style.borderColor='#334155'"
+            >
+              <div class="relative mb-3 h-24 flex items-center justify-center">
+                <img
+                  class="w-20 h-20 object-contain group-hover:scale-110 transition-transform"
+                  src="./images/mars.png"
+                  alt="Mars"
+                />
+              </div>
+              <h4 class="font-semibold text-center text-sm">Mars</h4>
+              <p class="text-xs text-slate-400 text-center">1.52 AU</p>
+            </div>
+            <!-- Jupiter -->
+            <div
+              class="planet-card bg-slate-800/50 border border-slate-700 rounded-2xl p-4 transition-all cursor-pointer group"
+              data-planet-id="jupiter"
+              style="--planet-color: #fb923c"
+              onmouseover="this.style.borderColor='#fb923c80'"
+              onmouseout="this.style.borderColor='#334155'"
+            >
+              <div class="relative mb-3 h-24 flex items-center justify-center">
+                <img
+                  class="w-20 h-20 object-contain group-hover:scale-110 transition-transform"
+                  src="./images/jupiter.png"
+                  alt="Jupiter"
+                />
+              </div>
+              <h4 class="font-semibold text-center text-sm">Jupiter</h4>
+              <p class="text-xs text-slate-400 text-center">5.20 AU</p>
+            </div>
+            <!-- Saturn -->
+            <div
+              class="planet-card bg-slate-800/50 border border-slate-700 rounded-2xl p-4 transition-all cursor-pointer group"
+              data-planet-id="saturn"
+              style="--planet-color: #facc15"
+              onmouseover="this.style.borderColor='#facc1580'"
+              onmouseout="this.style.borderColor='#334155'"
+            >
+              <div class="relative mb-3 h-24 flex items-center justify-center">
+                <img
+                  class="w-20 h-20 object-contain group-hover:scale-110 transition-transform"
+                  src="./images/saturn.png"
+                  alt="Saturn"
+                />
+              </div>
+              <h4 class="font-semibold text-center text-sm">Saturn</h4>
+              <p class="text-xs text-slate-400 text-center">9.58 AU</p>
+            </div>
+            <!-- Uranus -->
+            <div
+              class="planet-card bg-slate-800/50 border border-slate-700 rounded-2xl p-4 transition-all cursor-pointer group"
+              data-planet-id="uranus"
+              style="--planet-color: #06b6d4"
+              onmouseover="this.style.borderColor='#06b6d480'"
+              onmouseout="this.style.borderColor='#334155'"
+            >
+              <div class="relative mb-3 h-24 flex items-center justify-center">
+                <img
+                  class="w-20 h-20 object-contain group-hover:scale-110 transition-transform"
+                  src="./images/uranus.png"
+                  alt="Uranus"
+                />
+              </div>
+              <h4 class="font-semibold text-center text-sm">Uranus</h4>
+              <p class="text-xs text-slate-400 text-center">19.22 AU</p>
+            </div>
+            <!-- Neptune -->
+            <div
+              class="planet-card bg-slate-800/50 border border-slate-700 rounded-2xl p-4 transition-all cursor-pointer group"
+              data-planet-id="neptune"
+              style="--planet-color: #2563eb"
+              onmouseover="this.style.borderColor='#2563eb80'"
+              onmouseout="this.style.borderColor='#334155'"
+            >
+              <div class="relative mb-3 h-24 flex items-center justify-center">
+                <img
+                  class="w-20 h-20 object-contain group-hover:scale-110 transition-transform"
+                  src="./images/neptune.png"
+                  alt="Neptune"
+                />
+              </div>
+              <h4 class="font-semibold text-center text-sm">Neptune</h4>
+              <p class="text-xs text-slate-400 text-center">30.05 AU</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 xl:grid-cols-3 gap-4 md:gap-6">
+            <div
+              class="xl:col-span-2 bg-slate-800/50 border border-slate-700 rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8"
+            >
+              <div
+                class="flex flex-col xl:flex-row xl:items-start space-y-4 xl:space-y-0"
+              >
+                <div
+                  class="relative h-48 w-48 md:h-64 md:w-64 shrink-0 mx-auto xl:mr-6"
+                >
+                  <img
+                    id="planet-detail-image"
+                    class="w-full h-full object-contain"
+                    src="./images/earth.png"
+                    alt="earth planet detailed realistic render with clouds and continents"
+                  />
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between mb-3 md:mb-4">
+                    <h3
+                      id="planet-detail-name"
+                      class="text-2xl md:text-3xl font-space font-bold"
+                    >
+                      Earth
+                    </h3>
+                    <button
+                      class="w-10 h-10 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors"
+                    >
+                      <i class="far fa-heart"></i>
+                    </button>
+                  </div>
+                  <p
+                    id="planet-detail-description"
+                    class="text-slate-300 mb-4 md:mb-6 leading-relaxed text-sm md:text-base"
+                  >
+                    Earth is the third planet from the Sun and the only
+                    astronomical object known to harbor life. About 29% of
+                    Earth's surface is land consisting of continents and
+                    islands. The remaining 71% is covered with water, mostly by
+                    oceans, seas, gulfs, and other salt-water bodies, but also
+                    by lakes, rivers, and other fresh water, which together
+                    constitute the hydrosphere.
+                  </p>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-2 md:gap-4 mt-4">
+                <div class="bg-slate-900/50 rounded-lg p-3 md:p-4">
+                  <p
+                    class="text-xs text-slate-400 mb-1 flex items-center gap-1"
+                  >
+                    <i class="fas fa-ruler text-xs"></i>
+                    <span class="text-xs">Semimajor Axis</span>
+                  </p>
+                  <p
+                    id="planet-distance"
+                    class="text-sm md:text-lg font-semibold"
+                  >
+                    149.6M km
+                  </p>
+                </div>
+                <div class="bg-slate-900/50 rounded-lg p-4">
+                  <p
+                    class="text-xs text-slate-400 mb-1 flex items-center gap-1"
+                  >
+                    <i class="fas fa-circle"></i>
+                    Mean Radius
+                  </p>
+                  <p id="planet-radius" class="text-lg font-semibold">
+                    6,371 km
+                  </p>
+                </div>
+                <div class="bg-slate-900/50 rounded-lg p-4">
+                  <p
+                    class="text-xs text-slate-400 mb-1 flex items-center gap-1"
+                  >
+                    <i class="fas fa-weight"></i>
+                    Mass
+                  </p>
+                  <p id="planet-mass" class="text-lg font-semibold">
+                    5.97 × 10²⁴ kg
+                  </p>
+                </div>
+                <div class="bg-slate-900/50 rounded-lg p-4">
+                  <p
+                    class="text-xs text-slate-400 mb-1 flex items-center gap-1"
+                  >
+                    <i class="fas fa-compress"></i>
+                    Density
+                  </p>
+                  <p id="planet-density" class="text-lg font-semibold">
+                    5.51 g/cm³
+                  </p>
+                </div>
+                <div class="bg-slate-900/50 rounded-lg p-4">
+                  <p
+                    class="text-xs text-slate-400 mb-1 flex items-center gap-1"
+                  >
+                    <i class="fas fa-sync-alt"></i>
+                    Orbital Period
+                  </p>
+                  <p id="planet-orbital-period" class="text-lg font-semibold">
+                    365.25 days
+                  </p>
+                </div>
+                <div class="bg-slate-900/50 rounded-lg p-4">
+                  <p
+                    class="text-xs text-slate-400 mb-1 flex items-center gap-1"
+                  >
+                    <i class="fas fa-redo"></i>
+                    Rotation Period
+                  </p>
+                  <p id="planet-rotation" class="text-lg font-semibold">
+                    24 hours
+                  </p>
+                </div>
+                <div class="bg-slate-900/50 rounded-lg p-4">
+                  <p
+                    class="text-xs text-slate-400 mb-1 flex items-center gap-1"
+                  >
+                    <i class="fas fa-moon"></i>
+                    Moons
+                  </p>
+                  <p id="planet-moons" class="text-lg font-semibold">1</p>
+                </div>
+                <div class="bg-slate-900/50 rounded-lg p-4">
+                  <p
+                    class="text-xs text-slate-400 mb-1 flex items-center gap-1"
+                  >
+                    <i class="fas fa-arrows-alt-v"></i>
+                    Gravity
+                  </p>
+                  <p id="planet-gravity" class="text-lg font-semibold">
+                    9.8 m/s²
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="space-y-6">
+              <div
+                class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6"
+              >
+                <h4 class="font-semibold mb-4 flex items-center">
+                  <i class="fas fa-user-astronaut text-purple-400 mr-2"></i>
+                  Discovery Info
+                </h4>
+                <div class="space-y-3 text-sm">
+                  <div
+                    class="flex justify-between items-center py-2 border-b border-slate-700"
+                  >
+                    <span class="text-slate-400">Discovered By</span>
+                    <span
+                      id="planet-discoverer"
+                      class="font-semibold text-right"
+                      >Known since antiquity</span
+                    >
+                  </div>
+                  <div
+                    class="flex justify-between items-center py-2 border-b border-slate-700"
+                  >
+                    <span class="text-slate-400">Discovery Date</span>
+                    <span id="planet-discovery-date" class="font-semibold"
+                      >Ancient</span
+                    >
+                  </div>
+                  <div
+                    class="flex justify-between items-center py-2 border-b border-slate-700"
+                  >
+                    <span class="text-slate-400">Body Type</span>
+                    <span id="planet-body-type" class="font-semibold"
+                      >Planet</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center py-2">
+                    <span class="text-slate-400">Volume</span>
+                    <span id="planet-volume" class="font-semibold">N/A</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6"
+              >
+                <h4 class="font-semibold mb-4 flex items-center">
+                  <i class="fas fa-lightbulb text-yellow-400 mr-2"></i>
+                  Quick Facts
+                </h4>
+                <ul id="planet-facts" class="space-y-3 text-sm">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+                    <span class="text-slate-300"
+                      >Only known planet with liquid water</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+                    <span class="text-slate-300"
+                      >Atmosphere contains 78% nitrogen</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+                    <span class="text-slate-300"
+                      >Magnetic field protects from solar wind</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+                    <span class="text-slate-300"
+                      >Formed 4.54 billion years ago</span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6"
+              >
+                <h4 class="font-semibold mb-4 flex items-center">
+                  <i class="fas fa-satellite text-blue-400 mr-2"></i>
+                  Orbital Characteristics
+                </h4>
+                <div class="space-y-3 text-sm">
+                  <div
+                    class="flex justify-between items-center py-2 border-b border-slate-700"
+                  >
+                    <span class="text-slate-400">Perihelion</span>
+                    <span id="planet-perihelion" class="font-semibold"
+                      >147.1M km</span
+                    >
+                  </div>
+                  <div
+                    class="flex justify-between items-center py-2 border-b border-slate-700"
+                  >
+                    <span class="text-slate-400">Aphelion</span>
+                    <span id="planet-aphelion" class="font-semibold"
+                      >152.1M km</span
+                    >
+                  </div>
+                  <div
+                    class="flex justify-between items-center py-2 border-b border-slate-700"
+                  >
+                    <span class="text-slate-400">Eccentricity</span>
+                    <span id="planet-eccentricity" class="font-semibold"
+                      >0.0167</span
+                    >
+                  </div>
+                  <div
+                    class="flex justify-between items-center py-2 border-b border-slate-700"
+                  >
+                    <span class="text-slate-400">Inclination</span>
+                    <span id="planet-inclination" class="font-semibold"
+                      >0.00°</span
+                    >
+                  </div>
+                  <div
+                    class="flex justify-between items-center py-2 border-b border-slate-700"
+                  >
+                    <span class="text-slate-400">Axial Tilt</span>
+                    <span id="planet-axial-tilt" class="font-semibold"
+                      >23.44°</span
+                    >
+                  </div>
+                  <div
+                    class="flex justify-between items-center py-2 border-b border-slate-700"
+                  >
+                    <span class="text-slate-400">Avg Temperature</span>
+                    <span id="planet-temp" class="font-semibold">15°C</span>
+                  </div>
+                  <div class="flex justify-between items-center py-2">
+                    <span class="text-slate-400">Escape Velocity</span>
+                    <span id="planet-escape" class="font-semibold"
+                      >11.2 km/s</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <button
+                class="w-full py-3 bg-blue-500 rounded-lg hover:bg-blue-600 transition-colors font-semibold"
+              >
+                <i class="fas fa-book mr-2"></i>Learn More
+              </button>
+            </div>
+          </div>
+          <div class="mt-8">
+            <h2 class="text-xl md:text-2xl font-space font-bold mb-4 md:mb-6">
+              Planet Comparison
+            </h2>
+            <div
+              class="bg-slate-800/50 border border-slate-700 rounded-xl md:rounded-2xl overflow-hidden"
+            >
+              <div class="overflow-x-auto custom-scrollbar">
+                <table class="w-full min-w-[800px]">
+                  <thead class="bg-slate-900/50">
+                    <tr>
+                      <th
+                        class="px-4 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-semibold whitespace-nowrap sticky left-0 bg-slate-900 z-10"
+                      >
+                        Planet
+                      </th>
+                      <th
+                        class="px-4 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-semibold whitespace-nowrap"
+                      >
+                        Distance (AU)
+                      </th>
+                      <th
+                        class="px-4 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-semibold whitespace-nowrap"
+                      >
+                        Diameter (km)
+                      </th>
+                      <th
+                        class="px-4 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-semibold whitespace-nowrap"
+                      >
+                        Mass (Earth=1)
+                      </th>
+                      <th
+                        class="px-4 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-semibold whitespace-nowrap"
+                      >
+                        Orbital Period
+                      </th>
+                      <th
+                        class="px-4 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-semibold whitespace-nowrap"
+                      >
+                        Moons
+                      </th>
+                      <th
+                        class="px-4 md:px-6 py-3 md:py-4 text-left text-xs md:text-sm font-semibold whitespace-nowrap"
+                      >
+                        Type
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    id="planet-comparison-tbody"
+                    class="divide-y divide-slate-700"
+                  >
+                    <!-- Mercury -->
+                    <tr class="hover:bg-slate-800/30 transition-colors">
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 sticky left-0 bg-slate-800 z-10"
+                      >
+                        <div class="flex items-center space-x-2 md:space-x-3">
+                          <div
+                            class="w-6 h-6 md:w-8 md:h-8 rounded-full flex-shrink-0"
+                            style="background-color: #eab308"
+                          ></div>
+                          <span
+                            class="font-semibold text-sm md:text-base whitespace-nowrap"
+                            >Mercury</span
+                          >
+                        </div>
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        0.39
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        4,879
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        0.055
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        88 days
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        0
+                      </td>
+                      <td class="px-4 md:px-6 py-3 md:py-4 whitespace-nowrap">
+                        <span
+                          class="px-2 py-1 rounded text-xs bg-orange-500/50 text-orange-200"
+                          >Terrestrial</span
+                        >
+                      </td>
+                    </tr>
+                    <!-- Venus -->
+                    <tr class="hover:bg-slate-800/30 transition-colors">
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 sticky left-0 bg-slate-800 z-10"
+                      >
+                        <div class="flex items-center space-x-2 md:space-x-3">
+                          <div
+                            class="w-6 h-6 md:w-8 md:h-8 rounded-full flex-shrink-0"
+                            style="background-color: #f97316"
+                          ></div>
+                          <span
+                            class="font-semibold text-sm md:text-base whitespace-nowrap"
+                            >Venus</span
+                          >
+                        </div>
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        0.72
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        12,104
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        0.815
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        225 days
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        0
+                      </td>
+                      <td class="px-4 md:px-6 py-3 md:py-4 whitespace-nowrap">
+                        <span
+                          class="px-2 py-1 rounded text-xs bg-orange-500/50 text-orange-200"
+                          >Terrestrial</span
+                        >
+                      </td>
+                    </tr>
+                    <!-- Earth -->
+                    <tr
+                      class="hover:bg-slate-800/30 transition-colors bg-blue-500/5"
+                    >
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 sticky left-0 bg-slate-800 z-10"
+                      >
+                        <div class="flex items-center space-x-2 md:space-x-3">
+                          <div
+                            class="w-6 h-6 md:w-8 md:h-8 rounded-full flex-shrink-0"
+                            style="background-color: #3b82f6"
+                          ></div>
+                          <span
+                            class="font-semibold text-sm md:text-base whitespace-nowrap"
+                            >Earth</span
+                          >
+                        </div>
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        1.00
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        12,742
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        1.000
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        365.2 days
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        1
+                      </td>
+                      <td class="px-4 md:px-6 py-3 md:py-4 whitespace-nowrap">
+                        <span
+                          class="px-2 py-1 rounded text-xs bg-blue-500/50 text-blue-200"
+                          >Terrestrial</span
+                        >
+                      </td>
+                    </tr>
+                    <!-- Mars -->
+                    <tr class="hover:bg-slate-800/30 transition-colors">
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 sticky left-0 bg-slate-800 z-10"
+                      >
+                        <div class="flex items-center space-x-2 md:space-x-3">
+                          <div
+                            class="w-6 h-6 md:w-8 md:h-8 rounded-full flex-shrink-0"
+                            style="background-color: #ef4444"
+                          ></div>
+                          <span
+                            class="font-semibold text-sm md:text-base whitespace-nowrap"
+                            >Mars</span
+                          >
+                        </div>
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        1.52
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        6,779
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        0.107
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        687 days
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        2
+                      </td>
+                      <td class="px-4 md:px-6 py-3 md:py-4 whitespace-nowrap">
+                        <span
+                          class="px-2 py-1 rounded text-xs bg-red-500/50 text-red-200"
+                          >Terrestrial</span
+                        >
+                      </td>
+                    </tr>
+                    <!-- Jupiter -->
+                    <tr class="hover:bg-slate-800/30 transition-colors">
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 sticky left-0 bg-slate-800 z-10"
+                      >
+                        <div class="flex items-center space-x-2 md:space-x-3">
+                          <div
+                            class="w-6 h-6 md:w-8 md:h-8 rounded-full flex-shrink-0"
+                            style="background-color: #fb923c"
+                          ></div>
+                          <span
+                            class="font-semibold text-sm md:text-base whitespace-nowrap"
+                            >Jupiter</span
+                          >
+                        </div>
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        5.20
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        139,820
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        317.8
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        11.9 years
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        79
+                      </td>
+                      <td class="px-4 md:px-6 py-3 md:py-4 whitespace-nowrap">
+                        <span
+                          class="px-2 py-1 rounded text-xs bg-purple-500/50 text-purple-200"
+                          >Gas Giant</span
+                        >
+                      </td>
+                    </tr>
+                    <!-- Saturn -->
+                    <tr class="hover:bg-slate-800/30 transition-colors">
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 sticky left-0 bg-slate-800 z-10"
+                      >
+                        <div class="flex items-center space-x-2 md:space-x-3">
+                          <div
+                            class="w-6 h-6 md:w-8 md:h-8 rounded-full flex-shrink-0"
+                            style="background-color: #facc15"
+                          ></div>
+                          <span
+                            class="font-semibold text-sm md:text-base whitespace-nowrap"
+                            >Saturn</span
+                          >
+                        </div>
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        9.58
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        116,460
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        95.2
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        29.5 years
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        82
+                      </td>
+                      <td class="px-4 md:px-6 py-3 md:py-4 whitespace-nowrap">
+                        <span
+                          class="px-2 py-1 rounded text-xs bg-yellow-500/50 text-yellow-200"
+                          >Gas Giant</span
+                        >
+                      </td>
+                    </tr>
+                    <!-- Uranus -->
+                    <tr class="hover:bg-slate-800/30 transition-colors">
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 sticky left-0 bg-slate-800 z-10"
+                      >
+                        <div class="flex items-center space-x-2 md:space-x-3">
+                          <div
+                            class="w-6 h-6 md:w-8 md:h-8 rounded-full flex-shrink-0"
+                            style="background-color: #06b6d4"
+                          ></div>
+                          <span
+                            class="font-semibold text-sm md:text-base whitespace-nowrap"
+                            >Uranus</span
+                          >
+                        </div>
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        19.22
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        50,724
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        14.5
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        84.0 years
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        27
+                      </td>
+                      <td class="px-4 md:px-6 py-3 md:py-4 whitespace-nowrap">
+                        <span
+                          class="px-2 py-1 rounded text-xs bg-cyan-500/50 text-cyan-200"
+                          >Ice Giant</span
+                        >
+                      </td>
+                    </tr>
+                    <!-- Neptune -->
+                    <tr class="hover:bg-slate-800/30 transition-colors">
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 sticky left-0 bg-slate-800 z-10"
+                      >
+                        <div class="flex items-center space-x-2 md:space-x-3">
+                          <div
+                            class="w-6 h-6 md:w-8 md:h-8 rounded-full flex-shrink-0"
+                            style="background-color: #2563eb"
+                          ></div>
+                          <span
+                            class="font-semibold text-sm md:text-base whitespace-nowrap"
+                            >Neptune</span
+                          >
+                        </div>
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        30.05
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        49,244
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        17.1
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        164.8 years
+                      </td>
+                      <td
+                        class="px-4 md:px-6 py-3 md:py-4 text-slate-300 text-sm md:text-base whitespace-nowrap"
+                      >
+                        14
+                      </td>
+                      <td class="px-4 md:px-6 py-3 md:py-4 whitespace-nowrap">
+                        <span
+                          class="px-2 py-1 rounded text-xs bg-blue-500/50 text-blue-200"
+                          >Ice Giant</span
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
